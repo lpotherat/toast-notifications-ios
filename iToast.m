@@ -320,7 +320,7 @@ static iToastSettings *sharedSettings = nil;
 	return self;
 }
 
-- (iToast *) setPostion:(CGPoint) _position{
+- (iToast *) setPosition:(CGPoint) _position{
 	[self theSettings].postition = CGPointMake(_position.x, _position.y);
 	
 	return self;
