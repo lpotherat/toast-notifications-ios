@@ -142,7 +142,7 @@ static iToastSettings *sharedSettings = nil;
 			} else if (theSettings.gravity == iToastGravityCenter) {
 				point = CGPointMake(window.frame.size.width/2, window.frame.size.height/2);
 			} else {
-				point = theSettings.postition;
+				point = theSettings.position;
 			}
 			
 			point = CGPointMake(point.x + theSettings.offsetLeft, point.y + theSettings.offsetTop);
@@ -163,7 +163,7 @@ static iToastSettings *sharedSettings = nil;
 				point = CGPointMake(width/2, height/2);
 			} else {
 				// TODO : handle this case
-				point = theSettings.postition;
+				point = theSettings.position;
 			}
 			
 			point = CGPointMake(point.x - theSettings.offsetLeft, point.y - theSettings.offsetTop);
@@ -181,7 +181,7 @@ static iToastSettings *sharedSettings = nil;
 				point = CGPointMake(window.frame.size.width/2, window.frame.size.height/2);
 			} else {
 				// TODO : handle this case
-				point = theSettings.postition;
+				point = theSettings.position;
 			}
 			
 			point = CGPointMake(point.x - theSettings.offsetTop, point.y - theSettings.offsetLeft);
@@ -199,7 +199,7 @@ static iToastSettings *sharedSettings = nil;
 				point = CGPointMake(window.frame.size.width/2, window.frame.size.height/2);
 			} else {
 				// TODO : handle this case
-				point = theSettings.postition;
+				point = theSettings.position;
 			}
 			
 			point = CGPointMake(point.x + theSettings.offsetTop, point.y + theSettings.offsetLeft);
@@ -321,7 +321,7 @@ static iToastSettings *sharedSettings = nil;
 }
 
 - (iToast *) setPosition:(CGPoint) _position{
-	[self theSettings].postition = CGPointMake(_position.x, _position.y);
+	[self theSettings].position = CGPointMake(_position.x, _position.y);
 	
 	return self;
 }
@@ -376,7 +376,7 @@ static iToastSettings *sharedSettings = nil;
 @implementation iToastSettings
 @synthesize duration;
 @synthesize gravity;
-@synthesize postition;
+@synthesize position;
 @synthesize fontSize;
 @synthesize useShadow;
 @synthesize cornerRadius;
@@ -434,7 +434,7 @@ static iToastSettings *sharedSettings = nil;
 	iToastSettings *copy = [iToastSettings new];
 	copy.gravity = self.gravity;
 	copy.duration = self.duration;
-	copy.postition = self.postition;
+	copy.position = self.position;
 	copy.fontSize = self.fontSize;
 	copy.useShadow = self.useShadow;
 	copy.cornerRadius = self.cornerRadius;
