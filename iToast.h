@@ -72,7 +72,7 @@ typedef enum {
 			 offsetLeft:(NSInteger) left
 			 offsetTop:(NSInteger) top;
 - (iToast *) setGravity:(iToastGravity) gravity;
-- (iToast *) setPostion:(CGPoint) position;
+- (iToast *) setPosition:(CGPoint) position;
 - (iToast *) setFontSize:(CGFloat) fontSize;
 - (iToast *) setUseShadow:(BOOL) useShadow;
 - (iToast *) setCornerRadius:(CGFloat) cornerRadius;
@@ -92,7 +92,7 @@ typedef enum {
 @interface iToastSettings : NSObject<NSCopying>{
 	NSInteger duration;
 	iToastGravity gravity;
-	CGPoint postition;
+	CGPoint position;
 	iToastType toastType;
 	CGFloat fontSize;
 	BOOL useShadow;
@@ -112,7 +112,7 @@ typedef enum {
 
 @property(assign) NSInteger duration;
 @property(assign) iToastGravity gravity;
-@property(assign) CGPoint postition;
+@property(assign) CGPoint position;
 @property(assign) CGFloat fontSize;
 @property(assign) BOOL useShadow;
 @property(assign) CGFloat cornerRadius;
